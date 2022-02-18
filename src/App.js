@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Header from './component/Header'
+import Tasks from './component/Tasks'
 import './App.css';
 //import Button from './component/Button';
 
@@ -13,7 +14,7 @@ function App () {
         <Header/>
         {/*<h1>List</h1>
         <h2>Set {x ? 'Yes' : name }</h2>*/}
-        
+        <Tasks/>
     </div>
   );
 }
