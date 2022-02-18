@@ -48,21 +48,21 @@ function App () {
 ])
 
 
-//Delete Task
-const deleteTask = (id) => {
-  setTasks(tasks.filter((task) => task.id !== id))
-}
+  //Delete Task
+  const deleteTask = (id) => {
+    setTasks(tasks.filter((task) => task.id !== id))
+  }
 
-//Toggle Reminder
-const toggleReminder = (id) => {
-  setTasks(
-    tasks.map((task) => 
-      task.id === id ? {...task, reminder: 
-      !task.reminder} : task
-    )    
-  )
+  //Toggle Reminder
+  const toggleReminder = (id) => {
+    setTasks(
+      tasks.map((task) => 
+        task.id === id ? {...task, reminder: 
+        !task.reminder} : task
+      )    
+    )
 
-}
+  }
   
   return (
     <div className="container">
