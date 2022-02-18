@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Header from './component/Header'
 import Tasks from './component/Tasks'
+import AddTask from './component/AddTask'
 import './App.css';
 //import Button from './component/Button';
 
@@ -12,40 +13,44 @@ function App () {
     {
         id: 1,
         text: 'Avocado',
-        kind: 'Fruit',
+        day: 'Fruit',
         reminder: true,
     },
     {
         id: 2,
         text: 'Pineapple',
-        kind: 'Fruit',
+        day: 'Fruit',
         reminder: true,
     },
     {
         id: 3,
         text: 'Apple',
-        kind: 'Fruit',
+        day: 'Fruit',
         reminder: true,
     },
     {
         id: 4,
         text: 'Banana',
-        kind: 'Fruit',
+        day: 'Fruit',
         reminder: true,
     },
     {
         id: 5,
         text: 'Carrot',
-        kind: 'Vegetable',
+        day: 'Vegetable',
         reminder: true,
     },
     {
         id: 6,
         text: 'Cucumber',
-        kind: 'Vegetable',
+        day: 'Vegetable',
         reminder: true,
     }
 ])
+  //Add Task
+  const addTask = (task) => {
+    console.log(task)
+  }
 
 
   //Delete Task
@@ -67,6 +72,7 @@ function App () {
   return (
     <div className="container">
         <Header/>
+        <AddTask onAdd={AddTask}/>
         {/*<h1>List</h1>
         <h2>Set {x ? 'Yes' : name }</h2>*/}
         {tasks.length > 0 ? 

@@ -53,6 +53,7 @@ body {
 .btn-block{
     display: block;
     width: 100%;
+    margin-bottom: 10px;
 }
 
 .task {
@@ -81,7 +82,7 @@ body {
 }
 
 .form-control label {
-    display:block;
+    display: block;
 }
 
 .form-control input {
@@ -102,7 +103,7 @@ body {
     flex: 1;
 }
 
-.form-control-check label{
+.form-control-check input{
     flex: 2;
     height: 20px;
 }
