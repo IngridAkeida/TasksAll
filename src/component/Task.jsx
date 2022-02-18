@@ -2,16 +2,19 @@ import React from "react";
 
 import ClearIcon from '@mui/icons-material/Clear';
 
-const Task = ({task}) => {
+const Task = ({task, onDelete, onToggle}) => {
     return(
-        <div className="task">
+        <div className="task" 
+            onDoubleClick={() => onToggle(task.id)}>
             <h3>
-                {task.text}
+                {task.text}{' '}
                     <ClearIcon 
                         style={{
                             color: 'red',
-                            cursor: 'pointer' }}/>
-                </h3>
+                            cursor: 'pointer' }}
+                        onClick={() => onDelete(task.id)}
+                    />
+            </h3>
             <p>{task.kind}</p>
         </div>
     )

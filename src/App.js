@@ -8,7 +8,7 @@ function App () {
 
   //const name = 'Joe'
   //const x = true
-  const [tasks, SetTasks] = useState([
+  const [tasks, setTasks] = useState([
     {
         id: 1,
         text: 'Avocado',
@@ -49,13 +49,30 @@ function App () {
 
 
 //Delete Task
+const deleteTask = (id) => {
+  setTasks(tasks.filter((task) => task.id !== id))
+}
+
+//Toggle Reminder
+const toggleReminder = (id) => {
+  setTasks(
+    tasks.map((task) => 
+      task.id === id ? {...task, reminder: 
+      !task.reminder} : task
+    )    
+  )
+
+}
   
   return (
     <div className="container">
         <Header/>
         {/*<h1>List</h1>
         <h2>Set {x ? 'Yes' : name }</h2>*/}
-        <Tasks tasks={tasks}/>
+        {tasks.length > 0 ? 
+            (<Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder}/>
+          ) : (
+            'No Tasks To Show')}
     </div>
   );
 }
