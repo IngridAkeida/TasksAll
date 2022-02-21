@@ -16,6 +16,10 @@ const AddTask = ({onAdd}) => {
         }
 
         onAdd({ text, day, reminder})
+
+        setText('')
+        setDay('')
+        setReminder(false)
     }
 
     return(
@@ -44,8 +48,10 @@ const AddTask = ({onAdd}) => {
                 <label>Set Reminder</label>
                 <input 
                     type='checkbox'
+                    checked={reminder}
                     value={reminder} 
-                    onChange={(e) => setReminder(e.currentTarget.checked)} 
+                    onChange={(e) => 
+                        setReminder(e.currentTarget.checked)} 
                 />
             </div>
 
