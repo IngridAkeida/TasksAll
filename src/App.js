@@ -59,7 +59,7 @@ function App () {
     const newTask = { id, ...task}
     setTasks([...task, newTask])*/
   }
-
+  // Ajust deployed serve -s build, doesn't work 
 
   //Delete Task
   const deleteTask = (id) => {
